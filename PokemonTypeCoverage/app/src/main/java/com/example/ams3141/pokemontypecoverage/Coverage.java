@@ -73,16 +73,72 @@ public class Coverage extends AppCompatActivity {
         }
         */
 
+
+
+
+
         //brands.setText(brandsFormatted);
         //getResources().getIntArray(R.array.coverage)[0] = 1;
 
-        //if (Integer.getInteger(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.coverage)[0] || Integer.getInteger(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.coverage)[0]){
+        if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[0] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[0] ){
+            Totals.Normal();
+        }
+        if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[1] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[1] ){
             Totals.Fire();
-        //}
+        }
+        if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[2] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[2] ){
+            Totals.Water();
+        }
+        if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[3] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[3] ){
+            Totals.Electric();
+        }
+        if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[4] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[4] ){
+            Totals.Grass();
+        }
+        if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[5] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[5] ){
+            Totals.Ice();
+        }
+        if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[6] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[6] ){
+            Totals.Fighting();
+        }
+        if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[7] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[7] ){
+            Totals.Poison();
+        }
+        if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[8] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[8] ){
+            Totals.Ground();
+        }
+        if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[9] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[9] ){
+            Totals.Flying();
+        }
+        if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[10] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[10] ){
+            Totals.Psychic();
+        }
+        if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[11] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[11] ){
+            Totals.Bug();
+        }
+        if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[12] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[12] ){
+            Totals.Rock();
+        }
+        if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[13] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[13] ){
+            Totals.Ghost();
+        }
+        if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[14] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[14] ){
+            Totals.Dragon();
+        }
+        if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[15] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[15] ){
+            Totals.Dark();
+        }
+        if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[16] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[16] ){
+            Totals.Steel();
+        }
+        if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[17] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[17] ){
+            Totals.Fairy();
+        }
 
 
 
-        //Totals.setTot(2, 2);
+        //Totals.setTot(getResources().getIntArray(R.array.androidcolors)[0], 0);
+        //Totals.setTot(Integer.parseInt(String.valueOf(color1.getSelectedItem())), 1);
         ListView types3  = (ListView) findViewById(R.id.types);
         types3.setAdapter(new List2Adapter(this));
 
