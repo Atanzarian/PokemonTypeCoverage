@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <item name="Normal" color="#FFFF4444" type="color">#A8A77A</item>
+    <item name="Fire" color="#FFAA66CC" type="color">#EE8130</item>
+    <item name="Water" color="" type="color">#6390F0</item>
+    <item name="Electric" color="#FF99CC00" type="color">#F7D02C</item>
+    <item name="Grass" color="#FFFF4444" type="color">#7AC74C</item>
+    <item name="Ice" color="#FF0099CC" type="color">#96D9D6</item>
+    <item name="Fighting" color="#FF9933CC" type="color">#C22E28</item>
+    <item name="Poison" color="#FF669900" type="color">#A33EA1</item>
+    <item name="Ground" color="#FFFF8800" type="color">#E2BF65</item>
+    <item name="Flying" color="#FFCC0000" type="color">#A98FF3</item>
+    <item name="Psychic" color="#FFCC0000" type="color">#F95587</item>
+    <item name="Bug" color="#FFCC0000" type="color">#A6B91A</item>
+    <item name="Rock" color="#FFCC0000" type="color">#B6A136</item>
+    <item name="Ghost" color="#FFCC0000" type="color">#735797</item>
+    <item name="Dragon" color="#FFCC0000" type="color">#6F35FC</item>
+    <item name="Dark" color="#FFCC0000" type="color">#705746</item>
+    <item name="Steel" color="#FFCC0000" type="color">#B7B7CE</item>
+    <item name="Fairy" color="#FFCC0000" type="color">#D685AD</item>
+
+
+    <integer-array name="androidcolors">
+        <item>@color/Normal</item>
+        <item>@color/Fire</item>
+        <item>@color/Water</item>
+        <item>@color/Electric</item>
+        <item>@color/Grass</item>
+        <item>@color/Ice</item>
+        <item>@color/Fighting</item>
+        <item>@color/Poison</item>
+        <item>@color/Ground</item>
+        <item>@color/Flying</item>
+        <item>@color/Psychic</item>
+        <item>@color/Bug</item>
+        <item>@color/Rock</item>
+        <item>@color/Ghost</item>
+        <item>@color/Dragon</item>
+        <item>@color/Dark</item>
+        <item>@color/Steel</item>
+        <item>@color/Fairy</item>
+    </integer-array>
+    <string-array name="colornames">
+        <item>Normal</item>
+        <item>Fire</item>
+        <item>Water</item>
+        <item>Electric</item>
+        <item>Grass</item>
+        <item>Ice</item>
+        <item>Fighting</item>
+        <item>Poison</item>
+        <item>Ground</item>
+        <item>Flying</item>
+        <item>Psychic</item>
+        <item>Bug</item>
+        <item>Rock</item>
+        <item>Ghost</item>
+        <item>Dragon</item>
+        <item>Dark</item>
+        <item>Steel</item>
+        <item>Fairy</item>
+    </string-array>
+    <integer-array name="coverage">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+
+    </integer-array>
+
+    <color name="black_overlay">#66000000</color>
+</resources>

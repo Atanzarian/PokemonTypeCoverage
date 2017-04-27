@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Pokemon Type Coverage</string>
+    <string name="start_text">Type Coverage</string>
+    <string name="types"></string>
+    <string-array name="types2">
+        <item>light</item>
+        <item>amber</item>
+        <item>brown</item>
+        <item>dark</item>
+        <item>light2</item>
+        <item>amber2</item>
+        <item>brown2</item>
+        <item>dark2</item>
+        <item>light3</item>
+        <item>amber3</item>
+    </string-array>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>

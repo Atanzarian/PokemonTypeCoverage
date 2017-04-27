@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:background="@drawable/background2"
+    tools:context="com.example.ams3141.pokemontypecoverage.MainActivity">
+
+
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="135dp"
+        android:src="@drawable/logo2"
+        />
+    <TextView
+        android:id="@+id/start_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+
+        android:text="@string/start_text"
+        android:fontFamily="sans-serif"
+        android:textSize="36sp"
+        android:textColor="#FFCC03"
+
+        android:textStyle="normal|bold"
+        android:background="#3C58A5"/>
+
+    <Button
+        android:text="Let's go!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="36dp"
+        android:paddingLeft="56dp"
+        android:paddingRight="56dp"
+        android:paddingTop="36dp"
+        android:id="@+id/start"
+        android:backgroundTint="#FFCC03"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+
+        android:fontFamily="casual"
+        android:textStyle="normal|bold"
+        android:textAllCaps="true"
+        android:textColor="#3C58A5"
+        android:onClick="start_coverage" />
+
+</RelativeLayout>
