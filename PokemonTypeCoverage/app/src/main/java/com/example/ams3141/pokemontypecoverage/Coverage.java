@@ -22,9 +22,16 @@ import static android.R.interpolator.linear;
 
 public class Coverage extends AppCompatActivity {
 
+    public static int count = 0;
+    public static float total = 0;
+    public static float rating = 0;
+    public static float var = 0;
+    public static float stddv = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        count = 0;
         setContentView(R.layout.activity_coverage);
 
         Spinner spnColors1  = (Spinner) findViewById(R.id.spinner1);
@@ -39,6 +46,23 @@ public class Coverage extends AppCompatActivity {
 
         ListView types  = (ListView) findViewById(R.id.types);
         types.setAdapter(new List2Adapter(this));
+
+        ListView weak  = (ListView) findViewById(R.id.weaknesses);
+        weak.setAdapter(new WeaknessesAdapter(this));
+
+        ListView res  = (ListView) findViewById(R.id.resistance);
+        res.setAdapter(new ResistancesAdapter(this));
+
+        ListView imm  = (ListView) findViewById(R.id.immunes);
+        imm.setAdapter(new ImmunesAdapter(this));
+
+
+
+
+        TextView rating_text  = (TextView) findViewById(R.id.rating_text);
+        rating_text.setText("Average Rating of " + count + " Pokemon");
+        TextView average_rating  = (TextView) findViewById(R.id.average_rating);
+        average_rating.setText(String.valueOf(stddv));
 
 
         /*
@@ -135,6 +159,34 @@ public class Coverage extends AppCompatActivity {
             Totals.Fairy();
         }
 
+        for (int i = 0; i < Totals.tots2.length; i++) {
+            if (Totals.tots2[i] == 2) Totals.weakness += 1;
+            if (Totals.tots2[i] == .5) Totals.resistance += 1;
+            if (Totals.tots2[i] == 0) Totals.immune += 1;
+        }
+        Totals.sum();
+        Totals.reset_tots();
+
+        total=0;
+        count ++;
+        for (int i = 0; i < Totals.tots2.length; i++) {
+            total += Totals.tots2[i] * Totals.tots2[i];
+        }
+        rating = (total/18);
+
+        float temp = 0;
+        for(float a :Totals.tots2)
+            temp += (a-rating)*(a-rating);
+        var = temp/18;
+        //stddv = ((float)Math.sqrt(var)/count);
+        stddv = 1-((((float)Math.sqrt(rating)/count)-1)/1);
+        stddv = rating;
+
+        TextView rating_text  = (TextView) findViewById(R.id.rating_text);
+        rating_text.setText("Average Rating of " + count + " Pokemon");
+        TextView average_rating  = (TextView) findViewById(R.id.average_rating);
+        average_rating.setText(String.valueOf(stddv));
+
 
 
         //Totals.setTot(getResources().getIntArray(R.array.androidcolors)[0], 0);
@@ -142,6 +194,41 @@ public class Coverage extends AppCompatActivity {
         ListView types3  = (ListView) findViewById(R.id.types);
         types3.setAdapter(new List2Adapter(this));
 
+        ListView weak  = (ListView) findViewById(R.id.weaknesses);
+        weak.setAdapter(new WeaknessesAdapter(this));
+
+        ListView res  = (ListView) findViewById(R.id.resistance);
+        res.setAdapter(new ResistancesAdapter(this));
+
+        ListView imm  = (ListView) findViewById(R.id.immunes);
+        imm.setAdapter(new ImmunesAdapter(this));
+
     }
+    public void clearTotals(View view){
+        total=0;
+        count=0;
+        rating=0;
+        stddv =0;
+        Totals.reset_tots2();
+        Totals.reset_resistances();
+        Totals.reset_immunes();
+        Totals.reset_weaknesses();
+        TextView rating_text  = (TextView) findViewById(R.id.rating_text);
+        rating_text.setText("Average Rating of " + count + " Pokemon");
+        TextView average_rating  = (TextView) findViewById(R.id.average_rating);
+        average_rating.setText(String.valueOf(stddv));
+        ListView types3  = (ListView) findViewById(R.id.types);
+        types3.setAdapter(new List2Adapter(this));
+
+        ListView weak  = (ListView) findViewById(R.id.weaknesses);
+        weak.setAdapter(new WeaknessesAdapter(this));
+
+        ListView res  = (ListView) findViewById(R.id.resistance);
+        res.setAdapter(new ResistancesAdapter(this));
+
+        ListView imm  = (ListView) findViewById(R.id.immunes);
+        imm.setAdapter(new ImmunesAdapter(this));
+    }
+
 
 }
