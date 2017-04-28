@@ -54,9 +54,11 @@ class List2Adapter extends BaseAdapter
         view=inflater.inflate(android.R.layout.simple_spinner_dropdown_item, null);
         TextView txv=(TextView)view.findViewById(android.R.id.text1);
         txv.setBackgroundColor(colors.get(pos));
-        txv.setTextSize(20f);
+        txv.setTextSize(16f);
         //txv.setText(pos + "  " + colors.get(pos) + colors.get(pos)  );
         //txv.setText(+pos + "  " + colors.get(pos)  + "  " + context.getResources().getStringArray(R.array.colornames)[pos] );
+        //txv.setText(String.valueOf(Totals.getTot(pos)) + "          " + String.valueOf(Totals.getTot(pos)/ Coverage.count));
+        //txv.setText(String.valueOf(Totals.getTot(pos)) + "  " + String.valueOf(Totals.weaknesses[pos]) + "  " +String.valueOf(Totals.resistances[pos]) );
         txv.setText(String.valueOf(Totals.getTot(pos)));
         //txv.setText(String.valueOf(context.getResources().getIntArray(R.array.coverage)[pos] ));
         return view;

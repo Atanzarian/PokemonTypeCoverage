@@ -15,12 +15,12 @@ import java.util.ArrayList;
  * Created by ams3141 on 3/23/2017.
  */
 
-class ListAdapter extends BaseAdapter
+class ImmunesAdapter extends BaseAdapter
 {
     ArrayList<Integer> colors;
     Context context;
 
-    public ListAdapter(Context context)
+    public ImmunesAdapter(Context context)
     {
         this.context=context;
         colors=new ArrayList<Integer>();
@@ -57,8 +57,10 @@ class ListAdapter extends BaseAdapter
         txv.setTextSize(16f);
         //txv.setText(pos + "  " + colors.get(pos) + colors.get(pos)  );
         //txv.setText(+pos + "  " + colors.get(pos)  + "  " + context.getResources().getStringArray(R.array.colornames)[pos] );
-        //txv.setText(R.array.types);
-        txv.setText(context.getResources().getStringArray(R.array.colornames)[pos]);
+        //txv.setText(String.valueOf(Totals.getTot(pos)) + "          " + String.valueOf(Totals.getTot(pos)/ Coverage.count));
+        //txv.setText(String.valueOf(Totals.getTot(pos)) + "  " + String.valueOf(Totals.weaknesses[pos]) + "  " +String.valueOf(Totals.resistances[pos]) );
+        txv.setText(String.valueOf(Totals.immunes[pos]));
+        //txv.setText(String.valueOf(context.getResources().getIntArray(R.array.coverage)[pos] ));
         return view;
     }
 
