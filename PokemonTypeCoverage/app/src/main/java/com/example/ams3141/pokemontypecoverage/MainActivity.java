@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void start_coverage(View view) {
-        Intent intent=new Intent(MainActivity.this,Coverage.class);
+        Intent intent=new Intent(MainActivity.this,Attacking.class);
         MainActivity.this.startActivity(intent);
     }
 

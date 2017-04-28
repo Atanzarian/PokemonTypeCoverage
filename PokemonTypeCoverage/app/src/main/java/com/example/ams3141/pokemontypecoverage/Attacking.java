@@ -20,7 +20,7 @@ import static android.R.attr.id;
 import static android.R.interpolator.linear;
 
 
-public class Coverage extends AppCompatActivity {
+public class Attacking extends AppCompatActivity {
 
     public static int count = 0;
     public static int sum_weak = 0;
@@ -37,13 +37,13 @@ public class Coverage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         count = 0;
-        setContentView(R.layout.activity_coverage);
+        setContentView(R.layout.activity_attacking);
 
         Spinner spnColors1  = (Spinner) findViewById(R.id.spinner1);
         spnColors1.setAdapter(new SpinnerAdapter(this));
 
 
-        Spinner spnColors2  = (Spinner) findViewById(R.id.spinner2);
+        Spinner spnColors2  = (Spinner) findViewById(R.id.spinner1);
         spnColors2.setAdapter(new SpinnerAdapter(this));
 
         ListView coverage  = (ListView) findViewById(R.id.coverage);
@@ -91,7 +91,7 @@ public class Coverage extends AppCompatActivity {
     public void onClickFindTypes(View view) {
         ListView brands = (ListView) findViewById(R.id.types);
         Spinner color1 = (Spinner) findViewById(R.id.spinner1);
-        Spinner color2 = (Spinner) findViewById(R.id.spinner2);
+        Spinner color2 = (Spinner) findViewById(R.id.spinner1);
 
 
 
@@ -118,58 +118,58 @@ public class Coverage extends AppCompatActivity {
         //getResources().getIntArray(R.array.coverage)[0] = 1;
 
         if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[0] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[0] ){
-            Totals.Normal();
+            Totals.NormalAttack();
         }
         if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[1] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[1] ){
-            Totals.Fire();
+            Totals.FireAttack();
         }
         if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[2] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[2] ){
-            Totals.Water();
+            Totals.WaterAttack();
         }
         if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[3] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[3] ){
-            Totals.Electric();
+            Totals.ElectricAttack();
         }
         if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[4] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[4] ){
-            Totals.Grass();
+            Totals.GrassAttack();
         }
         if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[5] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[5] ){
-            Totals.Ice();
+            Totals.IceAttack();
         }
         if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[6] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[6] ){
-            Totals.Fighting();
+            Totals.FightingAttack();
         }
         if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[7] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[7] ){
-            Totals.Poison();
+            Totals.PoisonAttack();
         }
         if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[8] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[8] ){
-            Totals.Ground();
+            Totals.GroundAttack();
         }
         if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[9] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[9] ){
-            Totals.Flying();
+            Totals.FlyingAttack();
         }
         if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[10] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[10] ){
-            Totals.Psychic();
+            Totals.PsychicAttack();
         }
         if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[11] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[11] ){
-            Totals.Bug();
+            Totals.BugAttack();
         }
         if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[12] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[12] ){
-            Totals.Rock();
+            Totals.RockAttack();
         }
         if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[13] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[13] ){
-            Totals.Ghost();
+            Totals.GhostAttack();
         }
         if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[14] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[14] ){
-            Totals.Dragon();
+            Totals.DragonAttack();
         }
         if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[15] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[15] ){
-            Totals.Dark();
+            Totals.DarkAttack();
         }
         if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[16] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[16] ){
-            Totals.Steel();
+            Totals.SteelAttack();
         }
         if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[17] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[17] ){
-            Totals.Fairy();
+            Totals.FairyAttack();
         }
 
 
@@ -213,7 +213,10 @@ public class Coverage extends AppCompatActivity {
         //stddv = rating;
 
 
-        stddv = (float)Math.pow((double)1.1, (double)(sum_res- ((float)Math.pow(var, count*count) + sum_weak + sum_imm)) );
+        stddv = (float)Math.pow((double)1.1, (double)(sum_weak- ((float)Math.pow(var, count*count) + sum_res + sum_imm)) );
+
+
+
 
         TextView rating_text  = (TextView) findViewById(R.id.rating_text);
         rating_text.setText("Average Rating");
@@ -329,8 +332,8 @@ public class Coverage extends AppCompatActivity {
 
         ListView imm  = (ListView) findViewById(R.id.immunes);
         imm.setAdapter(new ImmunesAdapter(this));
-        Intent intent=new Intent(Coverage.this,Attacking.class);
-        Coverage.this.startActivity(intent);
+        Intent intent=new Intent(Attacking.this,Coverage.class);
+        Attacking.this.startActivity(intent);
     }
 
 

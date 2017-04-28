@@ -54,7 +54,7 @@ class SpinnerAdapter extends BaseAdapter
         view=inflater.inflate(android.R.layout.simple_spinner_dropdown_item, null);
         TextView txv=(TextView)view.findViewById(android.R.id.text1);
         txv.setBackgroundColor(colors.get(pos));
-        txv.setTextSize(20f);
+        txv.setTextSize(16f);
         //txv.setText(pos + "  " + colors.get(pos) + colors.get(pos)  );
         //txv.setText(+pos + "  " + colors.get(pos)  + "  " + context.getResources().getStringArray(R.array.colornames)[pos] );
         //txv.setText(R.array.types);
