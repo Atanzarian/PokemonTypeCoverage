@@ -6,6 +6,7 @@ package com.example.ams3141.pokemontypecoverage;
 
 public class Totals extends Coverage {
     public static float tots[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+    public static float tots2[] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 
     public static void setTot(int tot, int index) {
         tots[index] = tot;
