@@ -63,7 +63,6 @@ public class Attacking extends AppCompatActivity {
 
 
 
-
         TextView rating_text  = (TextView) findViewById(R.id.rating_text);
         rating_text.setText("Average Rating");
         TextView average_rating  = (TextView) findViewById(R.id.average_rating);
@@ -78,15 +77,6 @@ public class Attacking extends AppCompatActivity {
         total_imm.setText(String.valueOf(sum_imm));
 
 
-        /*
-        Button myButton = new Button(this);
-        myButton.setText("Push Me");
-
-        LinearLayout ll = (LinearLayout)findViewById(R.id.linear2);
-        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        ll.addView(myButton, lp);
-        */
-
     }
     public void onClickFindTypes(View view) {
         ListView brands = (ListView) findViewById(R.id.types);
@@ -94,28 +84,10 @@ public class Attacking extends AppCompatActivity {
         Spinner color2 = (Spinner) findViewById(R.id.spinner1);
 
 
-
         String type1 = String.valueOf(color1.getSelectedItem());
         String type2 = String.valueOf(color2.getSelectedItem());
 
 
-
-        /*
-        List<String> types = new ArrayList<String>();
-        types.add(type1);
-        types.add(type2);
-        StringBuilder brandsFormatted = new StringBuilder();
-        for (String brand : types) {
-            brandsFormatted.append(brand).append('\n');
-        }
-        */
-
-
-
-
-
-        //brands.setText(brandsFormatted);
-        //getResources().getIntArray(R.array.coverage)[0] = 1;
 
         if (Integer.parseInt(String.valueOf(color1.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[0] || Integer.parseInt(String.valueOf(color2.getSelectedItem())) == getResources().getIntArray(R.array.androidcolors)[0] ){
             Totals.NormalAttack();
@@ -173,7 +145,6 @@ public class Attacking extends AppCompatActivity {
         }
 
 
-
         for (int i = 0; i < Totals.tots.length; i++) {
             if (Totals.tots[i] == 4) Totals.weaknesses[i] += 2;
             if (Totals.tots[i] == 2) Totals.weaknesses[i] += 1;
@@ -213,9 +184,7 @@ public class Attacking extends AppCompatActivity {
         //stddv = rating;
 
 
-        stddv = (float)Math.pow((double)1.1, (double)(sum_weak- ((float)Math.pow(var, count*count) + sum_res + sum_imm)) );
-
-
+        stddv = 100*(float)Math.pow((double)1.1, (double)(sum_weak- ((float)Math.pow(var, var*var) + sum_res + sum_imm)) );
 
 
         TextView rating_text  = (TextView) findViewById(R.id.rating_text);
@@ -232,8 +201,7 @@ public class Attacking extends AppCompatActivity {
         total_imm.setText(String.valueOf(sum_imm));
 
 
-        //Totals.setTot(getResources().getIntArray(R.array.androidcolors)[0], 0);
-        //Totals.setTot(Integer.parseInt(String.valueOf(color1.getSelectedItem())), 1);
+
         ListView types3  = (ListView) findViewById(R.id.types);
         types3.setAdapter(new List2Adapter(this));
 
@@ -333,6 +301,7 @@ public class Attacking extends AppCompatActivity {
         ListView imm  = (ListView) findViewById(R.id.immunes);
         imm.setAdapter(new ImmunesAdapter(this));
         Intent intent=new Intent(Attacking.this,Coverage.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         Attacking.this.startActivity(intent);
     }
 

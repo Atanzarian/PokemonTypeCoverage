@@ -275,7 +275,7 @@
             android:layout_toRightOf="@id/rating_text"
             android:text=""
             android:layout_alignParentBottom="true"
-            android:layout_weight=".5"
+            android:layout_weight=".4"
             android:textSize="14sp"
             />
 

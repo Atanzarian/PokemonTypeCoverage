@@ -36,9 +36,20 @@
         android:textStyle="normal|bold"
         android:background="#3C58A5"/>
 
+    <LinearLayout
+        android:id="@+id/totals"
+        android:layout_below="@id/linear3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+
+
+        >
+
     <Button
-        android:text="Let's go!"
-        android:layout_width="wrap_content"
+        android:text="Go Offense"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:paddingBottom="36dp"
         android:paddingLeft="56dp"
@@ -48,11 +59,32 @@
         android:backgroundTint="#FFCC03"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
+        android:layout_weight="1"
 
         android:fontFamily="casual"
         android:textStyle="normal|bold"
         android:textAllCaps="true"
         android:textColor="#3C58A5"
-        android:onClick="start_coverage" />
+        android:onClick="start_attacking" />
+        <Button
+            android:text="Go Defense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="36dp"
+            android:paddingLeft="56dp"
+            android:paddingRight="56dp"
+            android:paddingTop="36dp"
+            android:id="@+id/start2"
+            android:backgroundTint="#FFCC03"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+
+            android:fontFamily="casual"
+            android:textStyle="normal|bold"
+            android:textAllCaps="true"
+            android:textColor="#3C58A5"
+            android:onClick="start_coverage" />
+    </LinearLayout>
 
 </RelativeLayout>
