@@ -9,7 +9,7 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp"
     android:background="@drawable/background2"
-    tools:context="com.example.ams3141.pokemontypecoverage.MainActivity">
+    tools:context="my.app.pokemontypecoverage.MainActivity">
 
 
 
@@ -27,7 +27,6 @@
         android:layout_below="@id/logo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-
         android:text="@string/start_text"
         android:fontFamily="sans-serif"
         android:textSize="36sp"

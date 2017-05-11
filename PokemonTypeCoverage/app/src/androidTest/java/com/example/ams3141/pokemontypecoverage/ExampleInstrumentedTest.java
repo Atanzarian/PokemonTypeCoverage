@@ -1,4 +1,4 @@
-package com.example.ams3141.pokemontypecoverage;
+package my.app.pokemontypecoverage;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.ams3141.pokemontypecoverage", appContext.getPackageName());
+        assertEquals("my.app.pokemontypecoverage", appContext.getPackageName());
     }
 }

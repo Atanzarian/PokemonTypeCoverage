@@ -1,4 +1,4 @@
-package com.example.ams3141.pokemontypecoverage;
+package my.app.pokemontypecoverage;
 
 import org.junit.Test;
 

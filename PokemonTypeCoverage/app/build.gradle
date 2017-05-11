@@ -1,10 +1,18 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'MyAndroidKey'
+            keyPassword 'PTCkey'
+            storeFile file('C:/Users/ams3141/Documents/PokemonTypeCoverage/PokemonTypeCoverage/android.jks')
+            storePassword '1@Cs@t1d'
+        }
+    }
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "com.example.ams3141.pokemontypecoverage"
+        applicationId "my.app.pokemontypecoverage"
         minSdkVersion 23
         targetSdkVersion 25
         versionCode 1
@@ -15,6 +23,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
         }
     }
     productFlavors {
