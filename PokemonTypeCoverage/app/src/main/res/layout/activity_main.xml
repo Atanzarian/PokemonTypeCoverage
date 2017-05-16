@@ -14,12 +14,20 @@
 
 
 
-    <ImageView
+    <TextView
         android:id="@+id/logo"
         android:layout_width="wrap_content"
-        android:layout_height="135dp"
-        android:src="@drawable/logo2"
-        />
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="PokeType"
+        android:fontFamily="sans-serif"
+        android:textSize="48sp"
+        android:textColor="#FFCC03"
+
+        android:textStyle="normal|bold"
+        android:background="#3C58A5"/>
     <TextView
         android:id="@+id/start_text"
         android:layout_width="wrap_content"
@@ -27,7 +35,7 @@
         android:layout_below="@id/logo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:text="@string/start_text"
+        android:text="Coverage"
         android:fontFamily="sans-serif"
         android:textSize="36sp"
         android:textColor="#FFCC03"
